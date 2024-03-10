@@ -3,3 +3,4 @@
 - application run command node index.js.
 - attached api response screenshot folder.
 - attached mysql database tables.
+- attached postman collection file.
