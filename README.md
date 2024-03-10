@@ -1,4 +1,4 @@
 # node-file-upload
 - step first run the command npm i --save
 - application run command node index.js
-- added api response screenshot folder
+- attached api response screenshot folder
