@@ -1,0 +1,6 @@
+[2024-03-10T15:47:08.916Z] INFO: user successfully register
+[2024-03-10T15:50:37.565Z] INFO: user successfully register
+[2024-03-10T15:51:48.404Z] INFO: user successfully register
+[2024-03-10T15:53:12.362Z] INFO: file upload successfully
+[2024-03-10T15:56:44.231Z] INFO: file upload successfully
+[2024-03-10T16:02:04.654Z] INFO: file upload successfully

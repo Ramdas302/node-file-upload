@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "8cc53ea1-12cb-40f6-b50f-ea5b162cd9bd",
+		"name": "file-upload",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28166245"
+	},
+	"item": [
+		{
+			"name": "sign-up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"ramdas4452\",\n    \"password\":\"ramdas123\",\n    \"email\":\"jrams031@gma.com\",\n    \"conform_password\":\"ramdas123\",\n    \"phone_no\":\"9920663933\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"ramdas4452\",\n    \"password\":\"ramdas123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVU0VSSUQiOiJyYW1kYXNAMTIzNiIsImlhdCI6MTcxMDA4NTk1MSwiZXhwIjoxNzEwMDg5NTUxfQ.UhJ15wgGxOj42I_B3etpaitgwt5pBgdPjkJG09RbVBQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "file-upload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVU0VSSUQiOiJyYW1kYXNAMTIzNiIsImlhdCI6MTcxMDA4NTk1MSwiZXhwIjoxNzEwMDg5NTUxfQ.UhJ15wgGxOj42I_B3etpaitgwt5pBgdPjkJG09RbVBQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/silk2023/payout-pg-document.zip/Fw_ INSTANT MUDRA_ PG API DOC__ PAYOUT API DOC.zip"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/user/uploadfile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"uploadfile"
+					],
+					"query": [
+						{
+							"key": "auth-token",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-file",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVU0VSSUQiOiJyYW1kYXNAMTIzNiIsImlhdCI6MTcxMDA4NTk1MSwiZXhwIjoxNzEwMDg5NTUxfQ.UhJ15wgGxOj42I_B3etpaitgwt5pBgdPjkJG09RbVBQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"filearray\":[40,41]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/user/deletefile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"deletefile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "file-list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVU0VSSUQiOiJyYW1kYXNAMTIzNiIsImlhdCI6MTcxMDA4NTk1MSwiZXhwIjoxNzEwMDg5NTUxfQ.UhJ15wgGxOj42I_B3etpaitgwt5pBgdPjkJG09RbVBQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/user/filelist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"filelist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVU0VSSUQiOiJyYW1kYXNAMTIzNiIsImlhdCI6MTcxMDA4NTk1MSwiZXhwIjoxNzEwMDg5NTUxfQ.UhJ15wgGxOj42I_B3etpaitgwt5pBgdPjkJG09RbVBQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"search_file\":\"file-1710086\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/user/filesearch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"filesearch"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVU0VSSUQiOiJyYW1kYXM0NDUyIiwiaWF0IjoxNzA5NjQwMjU1LCJleHAiOjE3MDk2NDM4NTV9.v6CXchu7ka_-sWJaePJcloT8Bau6UpKjJyZ_Dd6etrM",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
