@@ -8,7 +8,7 @@ module.exports.handleError = (error, req, res, next) => {
         status: "error",
         msg: error.message
     });
-    return next();
+     return next();
 };
 
 module.exports.handleUnknownRoute = (req, res, next) => {

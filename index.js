@@ -49,7 +49,6 @@ fs.readdirSync('./api/helpers/').forEach(function (file) {
 
 server.get("/", function (req, res, next) {
     res.send(" welcome to file upload server");
-    return next();
 });
 server.all('*', handleUnknownRoute);
 server.use(handleError);
